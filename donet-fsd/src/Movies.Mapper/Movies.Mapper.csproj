@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movies.Client.Core\Movies.Client.Core.csproj" />
+    <ProjectReference Include="..\Movies.ViewModel\Movies.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>

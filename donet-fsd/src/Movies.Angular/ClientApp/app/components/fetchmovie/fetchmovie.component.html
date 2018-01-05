@@ -1,0 +1,35 @@
+﻿<h1>Employee Data</h1>
+
+<p>This component demonstrates fetching Employee data from the server.</p>
+
+<p *ngIf="!movList"><em>Loading...</em></p>
+
+<p>
+    <a [routerLink]="['/register-movie']">Create New</a>
+</p>
+
+<table class='table' *ngIf="empList">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mov of movList">
+            <td>{{ mov.id }}</td>
+            <td>{{ mov.name }}</td>
+            <td>{{ mov.gender }}</td>
+            <td>{{ mov.department }}</td>
+            <td>{{ mov.city }}</td>
+            <td>
+            <td>
+                <a [routerLink]="['/movie/edit/', mov.id]">Edit</a> |
+                <a [routerLink]="" (click)="delete(mov.id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
